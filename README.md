@@ -7,7 +7,7 @@ Corrections des sujets de l'épreuve pratique du baccalauréat 2024 de NSI.
 
 <div align=center style="text-align: center;"><h2>LICENSE</h2></div>
 
-[Unlicense](https://choosealicense.com/licenses/unlicense/)
+[Unlicensed](https://choosealicense.com/licenses/unlicense/)
 
 ###
 
