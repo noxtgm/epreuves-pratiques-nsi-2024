@@ -1,8 +1,7 @@
 # Exo 1
 
 def ecriture_binaire_entier_positif(n:int):
-    binaire = str(n%2)
-    n = n // 2
+    binaire = ""
     while n > 0:
         binaire = str(n%2) + binaire
         n = n //2
