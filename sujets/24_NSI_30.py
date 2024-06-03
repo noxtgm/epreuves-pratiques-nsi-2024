@@ -2,23 +2,16 @@
 
 def fusion(tab1:list, tab2:list) -> list:
     tab = []
-    n1 = len(tab1)
-    n2 = len(tab2)
-    i, j = 0, 0
-    while i < n1 and j < n2:
-        if tab1[i] > tab2[j]:
-            tab.append(tab2[j])
-            j += 1
+    while tab1 != [] and tab2 != []:
+        if tab1[0] < tab2[0]:
+            tab.append(tab1.pop(0))
         else:
-            tab.append(tab1[i])
-            i += 1
-    while i < n1:
-        tab.append(tab1[i])
-        i += 1
-    while j < n2:
-        tab.append(tab2[j])
-        j += 1
-    return tab
+            tab.append(tab2.pop(0))
+    if tab1 == []:
+        tab += tab2
+    if tab2 == []:
+        tab += tab1
+    return tab 
 
 assert fusion([3, 5], [2, 5]) == [2, 3, 5, 5]
 assert fusion([-2, 4], [-3, 5, 10]) == [-3, -2, 4, 5, 10]
