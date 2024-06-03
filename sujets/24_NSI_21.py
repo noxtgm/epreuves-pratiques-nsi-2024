@@ -1,18 +1,15 @@
 # Exo 1
 
 def recherche_motif(motif:str, texte:str) -> list:
-    tab = []
-    for i in range(len(texte) - len(motif) + 1):
-        j = 0
-        corr = True
-        while corr and j < len(motif):
-            if texte[i+j] == motif[j]:
-                j += 1
-            else:
-                corr = False
-        if corr:
-            tab.append(i)
-    return tab
+    liste  = []
+    indice = 0
+    while indice < len(texte):
+        if motif == texte[indice : indice + len(motif)]:
+            liste  += [indice]
+            indice += len(motif)
+        else:
+            indice += 1
+    return liste
 
 assert recherche_motif("ab", "") == []
 assert recherche_motif("ab", "cdcdcdcd") == []
