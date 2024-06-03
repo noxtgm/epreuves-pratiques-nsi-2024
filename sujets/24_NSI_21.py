@@ -4,7 +4,7 @@ def recherche_motif(motif:str, texte:str) -> list:
     liste  = []
     indice = 0
     while indice < len(texte):
-        if motif == texte[indice : indice + len(motif)]:
+        if motif == texte[indice:indice+len(motif)]:
             liste  += [indice]
             indice += len(motif)
         else:
