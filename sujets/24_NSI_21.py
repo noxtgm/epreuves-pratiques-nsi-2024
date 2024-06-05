@@ -1,7 +1,7 @@
 # Exo 1
 
 def recherche_motif(motif:str, texte:str) -> list:
-    liste  = []
+    liste = []
     indice = 0
     while indice < len(texte):
         if motif == texte[indice:indice+len(motif)]:
